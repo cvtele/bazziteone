@@ -1,6 +1,11 @@
-# image-template
+# bazziteone
 
 # Purpose
+Based on universal-blue template to add the complete xone kernel module so that usb wired controllers will work. That capability was removed from the xone module included in bazzite to make it work along side of the legacy xpad support.
+
+https://github.com/ublue-os/bazzite/issues/970
+
+# Template documentation
 
 This repository is meant to be a template for building your own custom Universal Blue image. This template is the recommended way to make customizations to any image published by the Universal Blue Project:
 - [Aurora](https://getaurora.dev/)
