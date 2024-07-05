@@ -13,7 +13,7 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${FEDORA_MAJOR_VERSION}"/sentry-xone-fedora-"${FEDORA_MAJOR_VERSION}".repo
+curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${RELEASE}"/sentry-xone-fedora-"${RELEASE}".repo
 rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 
 # this would install a package from rpmfusion
