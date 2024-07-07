@@ -20,12 +20,13 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree status
 #rpm-ostree override remove akmod-xone
 
+rpm-ostree install akmods
 curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${RELEASE}"/sentry-xone-fedora-"${RELEASE}".repo
-#rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
+rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 #rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 #rpm-ostree install xone
 #rpm-ostree cleanup -m
-rpm-ostree override replace https://download.copr.fedorainfracloud.org/results/sentry/xone/fedora-40-x86_64/07272733-xone/akmod-xone-0.3.0_58004bf-4.fc40.x86_64.rpm
+#rpm-ostree override replace https://download.copr.fedorainfracloud.org/results/sentry/xone/fedora-40-x86_64/07272733-xone/akmod-xone-0.3.0_58004bf-4.fc40.x86_64.rpm
 ARCH="$(rpm -E '%_arch')"
 KERNEL="$(rpm -q "${KERNEL_NAME}" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 RELEASE="$(rpm -E '%fedora')"
