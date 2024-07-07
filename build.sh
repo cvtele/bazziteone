@@ -14,9 +14,11 @@ RELEASE="$(rpm -E %fedora)"
 
 # this installs a package from fedora repos
 #rpm-ostree override remove kmod-xone-6.9.6-201
+rpm-ostree override remove akmod-xone
+
 curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${RELEASE}"/sentry-xone-fedora-"${RELEASE}".repo
-rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
-#rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
+#rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
+rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 #rpm-ostree cleanup -m
 
 
