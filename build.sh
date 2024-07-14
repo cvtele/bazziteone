@@ -21,7 +21,7 @@ for i in $(rpm -qa | grep xone)
 do
   j="$j $i"
 done
-rpm-ostree override remove $j
+rpm-ostree uninstall $j
 
 #rpm-ostree override remove kmod-xone  xone-kmod-common
 #rpm-ostree status
