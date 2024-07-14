@@ -17,7 +17,7 @@ RELEASE="$(rpm -E %fedora)"
 
 #rpm-ostree override remove kmod-xone-6.9.7-201.fsync.fc40.x86_64-0.0.git.115.fdbb71f1-1.fc40.x86_64 xone-kmod-common-0.0.git.115.fdbb71f1-1.fc40.noarch
 
-rpm-ostree override remove xone-kmod-common xone-kmod
+rpm-ostree override remove  xone-kmod
 
 #rpm-ostree override remove kmod-xone  xone-kmod-common
 #rpm-ostree status
