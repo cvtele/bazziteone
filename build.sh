@@ -20,7 +20,7 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree status
 #rpm-ostree override remove akmod-xone
 
-rpm-ostree install akmods
+#rpm-ostree install akmods
 curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${RELEASE}"/sentry-xone-fedora-"${RELEASE}".repo
 rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone-kmod-common
