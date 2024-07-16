@@ -38,7 +38,7 @@ curl -Lo /etc/yum.repos.d/ublue-os-akmods.repo https://copr.fedorainfracloud.org
 #rpm-ostree install xone
 #rpm-ostree cleanup -m
 #rpm-ostree override replace https://download.copr.fedorainfracloud.org/results/sentry/xone/fedora-40-x86_64/07272733-xone/akmod-xone-0.3.0_58004bf-4.fc40.x86_64.rpm
-
+KERNEL_NAME="kernel"
 ARCH="$(rpm -E '%_arch')"
 KERNEL="$(rpm -q "${KERNEL_NAME}" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 RELEASE="$(rpm -E '%fedora')"
