@@ -28,11 +28,11 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree override remove akmod-xone
 
 #rpm-ostree install akmods
-mv /etc/yum.repos.d/_copr_ublue-os-akmods.repo /tmp
+#mv /etc/yum.repos.d/_copr_ublue-os-akmods.repo /tmp
 curl -Lo /etc/yum.repos.d/sentry-xone.repo https://copr.fedorainfracloud.org/coprs/sentry/xone/repo/fedora-"${RELEASE}"/sentry-xone-fedora-"${RELEASE}".repo
 curl -Lo /etc/yum.repos.d/ublue-os-akmods.repo https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-"${RELEASE}"/ublue-os-akmods-fedora-"${RELEASE}".repo
-rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:ublue-os:akmods xone-kmod-common
-#rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:sentry:xone akmod-xone
+#rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:ublue-os:akmods xone-kmod-common
+rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:sentry:xone akmod-xone
 
 #rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
 #rpm-ostree install xone
