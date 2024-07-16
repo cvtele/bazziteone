@@ -34,7 +34,8 @@ curl -Lo /etc/yum.repos.d/ublue-os-akmods.repo https://copr.fedorainfracloud.org
 #rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:ublue-os:akmods xone-kmod-common
 #rpm-ostree override replace --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:sentry:xone akmod-xone
 
-#rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone xone
+rpm-ostree install --experimental --freeze --from repo=copr:copr.fedorainfracloud.org:ublue-os:akmods xone-kmod-common
+rpm-ostree install --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:xone akmod-xone
 #rpm-ostree install xone
 #rpm-ostree cleanup -m
 #rpm-ostree override replace https://download.copr.fedorainfracloud.org/results/sentry/xone/fedora-40-x86_64/07272733-xone/akmod-xone-0.3.0_58004bf-4.fc40.x86_64.rpm
